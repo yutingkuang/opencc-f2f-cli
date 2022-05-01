@@ -1,0 +1,18 @@
+{
+  "name": "opencc-f2f-cli",
+  "version": "1.0.0",
+  "description": "把語系檔案透過cli方式，利用opencc套件，做中文轉換",
+  "main": "index.js",
+  "bin": {
+    "opencc-f2f-cli": "./index.js"
+  },
+  "author": "ytk",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^9.2.0",
+    "fs": "^0.0.1-security",
+    "glob": "^8.0.1",
+    "opencc": "^1.1.3",
+    "path": "^0.12.7"
+  }
+}
