@@ -27,13 +27,12 @@ program
   .option(
     "-c, --covert <type>",
     "What type of covert: [s2t|t2s|s2tw|tw2s|s2hk|hk2s|s2twp|tw2sp|t2tw|hk2t|tw2t]",
-    "tw2sp"
   )
   .option("-s, --source [path]", "source folder or file")
   .option("-d, --destination [path]", "destination folder");
 
 const configFromFile = () => {
-  const configPath = path.join(__dirname, './opencc.config.js');
+  const configPath = path.resolve('./opencc.config.js');
   if (fs.existsSync(configPath)) {
     return require(configPath);
   }
@@ -42,7 +41,7 @@ const configFromFile = () => {
 
 try {
   program.parse(process.argv);
-  const options = {...configFromFile(), ...program.opts()};
+  const options = { covert: "tw2sp", ...configFromFile(), ...program.opts() };
 
   // check covert type
   if (!covertTypes.includes(options.covert)) {
