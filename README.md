@@ -8,7 +8,7 @@ npm install -g opencc-f2f-cli
 
 ### Usage
 
-```console
+```
 # file to file covert
 opencc-f2f-cli -s ./locales/zh-tw/error.js -d ./locales/zh-cn/
 
@@ -19,19 +19,21 @@ opencc-f2f-cli -s ./locales/zh-tw/ -d ./locales/zh-cn/
 opencc-f2f-cli -s ./locales/zh-tw/\*\*/\*.js -d ./locales/zh-cn/
 ```
 
-`opencc-f2f-cli -h `
+#### Help
 
-```console
+`opencc-f2f-cli -h`
+
+```
 Usage: opencc-f2f-cli [options]
 
 Options:
-  -c, --covert <type>       What type of covert: [s2t|t2s|s2tw|tw2s|s2hk|hk2s|s2twp|tw2sp|t2tw|hk2t|tw2t] (default: "tw2s")
+  -c, --covert <type>       What type of covert: [s2t|t2s|s2tw|tw2s|s2hk|hk2s|s2twp|tw2sp|t2tw|hk2t|tw2t] (default: "tw2sp")
   -s, --source <path>       source folder or file
   -d, --destination <path>  destination folder
   -h, --help                display help for command
 ```
 
-covert type 請參考原套件 [Open Chinese Convert](https://github.com/BYVoid/OpenCC) 說明
+全部 covert type 請參考原套件 [Open Chinese Convert](https://github.com/BYVoid/OpenCC) 說明。
 
 ### Reference
 

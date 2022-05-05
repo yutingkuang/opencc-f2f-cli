@@ -27,13 +27,13 @@ program
   .option(
     "-c, --covert <type>",
     "What type of covert: [s2t|t2s|s2tw|tw2s|s2hk|hk2s|s2twp|tw2sp|t2tw|hk2t|tw2t]",
-    "tw2s"
+    "tw2sp"
   )
   .option("-s, --source [path]", "source folder or file")
   .option("-d, --destination [path]", "destination folder");
 
 const configFromFile = () => {
-  const configPath = path.resolve(__dirname, './opencc.config.js');
+  const configPath = path.join(__dirname, './opencc.config.js');
   if (fs.existsSync(configPath)) {
     return require(configPath);
   }
@@ -83,7 +83,7 @@ try {
 
   async function convert(text) {
     var result = await converter.convertPromise(text);
-    const terms = options.terms ?? [];
+    const terms = options.terms || [];
     for (let wordMap of terms) {
       const matchTerm = new RegExp(wordMap[0], "g");
       const isFind = result.match(matchTerm);

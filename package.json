@@ -1,13 +1,16 @@
 {
   "name": "opencc-f2f-cli",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "把語系檔案透過cli方式，利用opencc套件，做中文轉換",
   "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "bin": {
     "opencc-f2f-cli": "./index.js"
   },
-  "author": "ytk",
-  "license": "ISC",
+  "author": "ytk <yutingkuang@gmail.com>",
+  "license": "Apache 2.0",
   "dependencies": {
     "commander": "9.2.0",
     "fs": "0.0.1-security",
@@ -16,7 +19,21 @@
     "ora": "5.4.1",
     "path": "0.12.7"
   },
+  "devDependencies": {},
   "engines": {
     "node": ">=12"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yutingkuang/opencc-f2f-cli.git"
+  },
+  "homepage": "https://github.com/yutingkuang/opencc-f2f-cli",
+  "bugs": {
+    "url": "https://github.com/yutingkuang/opencc-f2f-cli/issues"
+  },
+  "keywords": [
+    "opencc",
+    "cli",
+    "中文轉換"
+  ]
 }
