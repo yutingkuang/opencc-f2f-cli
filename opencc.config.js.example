@@ -1,0 +1,8 @@
+module.exports = {
+ covert: "tw2s",
+ source: "./locales/zh-tw/**/*",
+ destination: "./locales/zh-cn",
+ terms: [
+  ["今天", "今日"],
+ ],
+}
