@@ -33,7 +33,7 @@ program
   .option("-d, --destination [path]", "destination folder");
 
 const configFromFile = () => {
-  const configPath = path.resolve(__dirname, './opencc.config.js');
+  const configPath = path.join(__dirname, './opencc.config.js');
   if (fs.existsSync(configPath)) {
     return require(configPath);
   }
