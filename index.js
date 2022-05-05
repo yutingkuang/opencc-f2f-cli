@@ -83,7 +83,7 @@ try {
 
   async function convert(text) {
     var result = await converter.convertPromise(text);
-    const terms = options.terms ?? [];
+    const terms = options.terms || [];
     for (let wordMap of terms) {
       const matchTerm = new RegExp(wordMap[0], "g");
       const isFind = result.match(matchTerm);
